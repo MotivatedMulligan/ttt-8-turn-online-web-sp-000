@@ -21,7 +21,7 @@ def turn_count(board)
       turn += 1
     end
   end
-
+end
 
 #Asking the user for their move by position 1-9.
 def turn(board)
