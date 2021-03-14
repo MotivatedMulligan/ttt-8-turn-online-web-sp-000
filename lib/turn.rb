@@ -25,16 +25,16 @@ def turn_count(board)
 end
 
 #Asking the user for their move by position 1-9.
-def turn(board, user_input, input)
+def turn(board)
   puts "Please enter 1-9:"
-  user_input = gets.strip
+  user_input = gets.chomp
   input = input_to_index(user_input)
   if valid_move?(board, input)
-    move(board, input, current_player(board))
+    move(board, input, character = "X")
     display_board(board)
   else
     puts "Please enter 1-9:"
-    user_input = gets.strip
+    user_input = gets.chomp
     input = input_to_index(user_input)
   end
 end
