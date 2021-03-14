@@ -29,7 +29,8 @@ def turn(board)
   end
 #Receiving the user input.
 def input_to_index(user_input)
- return = user_input - 1
+ input = user_input.to_i - 1
+ input
 end
 #Convert position to an index.
 def position_taken?(board, index)
