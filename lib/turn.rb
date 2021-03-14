@@ -7,7 +7,8 @@ def display_board(board)
    puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def move(board, index, current_player)
+def move(array, index, character)
+  array[index] = character
 end
 
 def position_taken?(board, index)
@@ -25,8 +26,18 @@ end
 
 #Asking the user for their move by position 1-9.
 def turn(board)
-  puts "Please choose a number 1-9:"
+  puts "Please enter 1-9:"
+  user_input = gets.strip
+  input = input_to_index(user_input)
+  if valid_move?(board, input)
+    move(board, input, current_player(board))
+    display_board(board)
+  else
+    puts "Please enter 1-9:"
+    user_input = gets.strip
+    input = input_to_index(user_input)
   end
+end
 #Receiving the user input.
 def input_to_index(user_input)
  input = user_input.to_i - 1
