@@ -25,7 +25,7 @@ def turn_count(board)
 end
 
 #Asking the user for their move by position 1-9.
-def turn(board)
+def turn(board, user_input, input)
   puts "Please enter 1-9:"
   user_input = gets.strip
   input = input_to_index(user_input)
