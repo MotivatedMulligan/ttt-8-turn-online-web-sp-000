@@ -7,8 +7,8 @@ def display_board(board)
    puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def move(array, index, character)
-  array[index] = character
+def move(array, index, current_player)
+  array[index] = current_player
 end
 
 def position_taken?(board, index)
